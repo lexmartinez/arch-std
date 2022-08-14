@@ -1,6 +1,7 @@
 import React from 'react'
 import { animate, AnimatePresence, motion, useMotionValue } from 'framer-motion'
 import { MainTitle, TitleContainer, Button, Overlay } from './styles'
+import { Visible } from 'react-grid-system'
 
 const transition = {
   type: 'spring',
@@ -63,7 +64,7 @@ const Contaier = React.forwardRef((props, ref) => (
       position: 'relative',
       width: '100%',
       height: '100%',
-      overflowX: 'hidden',
+      overflow: 'hidden',
       display: 'flex',
     }}
   >
@@ -108,53 +109,107 @@ const Carousel = ({ children }) => {
         transition={{ duration: 0.5, repeat: 'no' }}
         style={{ position: 'absolute', width: '100vw', height: '100vh' }}
       >
-        <MainTitle
-          style={{
-            fontSize: '5rem',
-            lineHeight: '6rem',
-            color: '#FFF',
-            filter: 'drop-shadow(3px 3px 2px #3333335d)',
-            zIndex: 9999,
-            position: 'absolute',
-            left: '8%',
-            top: '20%',
-          }}
-        >
-          Architect Studio
-        </MainTitle>
-        <p
-          style={{
-            fontSize: '1.2rem',
-            lineHeight: '1.5rem',
-            color: '#FFF',
-            filter: 'drop-shadow(3px 3px 2px #3333335d)',
-            zIndex: 9999,
-            position: 'absolute',
-            left: '8%',
-            top: '38%',
-            maxWidth: '45%',
-          }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          commodo enim ut sapien interdum vehicula. In facilisis ex sed rutrum.
-        </p>
-        <Button
-          style={{
-            background: 'transparent',
-            border: '0.1rem solid #fff',
-            zIndex: 9999,
-            position: 'absolute',
-            left: '8%',
-            top: '50%',
-            fontSize: '1.2rem',
-            lineHeight: '1.5rem',
-            minWidth: '20rem',
-            padding: '1rem 2rem',
-            color: '#FFF',
-          }}
-        >
-          See All
-        </Button>
+        <Visible md lg xl xxl xxxl>
+          <MainTitle
+            style={{
+              fontSize: '5rem',
+              lineHeight: '6rem',
+              color: '#FFF',
+              filter: 'drop-shadow(3px 3px 2px #3333335d)',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '20%',
+            }}
+          >
+            Architect Studio
+          </MainTitle>
+          <p
+            style={{
+              fontSize: '1.2rem',
+              lineHeight: '1.5rem',
+              color: '#FFF',
+              filter: 'drop-shadow(3px 3px 2px #3333335d)',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '38%',
+              maxWidth: '45%',
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            commodo enim ut sapien interdum vehicula. In facilisis ex sed
+            rutrum.
+          </p>
+          <Button
+            style={{
+              background: 'transparent',
+              border: '0.1rem solid #fff',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '50%',
+              fontSize: '1.2rem',
+              lineHeight: '1.5rem',
+              minWidth: '20rem',
+              padding: '1rem 2rem',
+              color: '#FFF',
+            }}
+          >
+            See All
+          </Button>
+        </Visible>
+
+        <Visible xs sm>
+          <MainTitle
+            style={{
+              fontSize: '3rem',
+              lineHeight: '3rem',
+              color: '#FFF',
+              filter: 'drop-shadow(3px 3px 2px #3333335d)',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '20%',
+            }}
+          >
+            Architect Studio
+          </MainTitle>
+          <p
+            style={{
+              fontSize: '1.2rem',
+              lineHeight: '1.5rem',
+              color: '#FFF',
+              filter: 'drop-shadow(3px 3px 2px #3333335d)',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '38%',
+              maxWidth: '82%',
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            commodo enim ut sapien interdum vehicula. In facilisis ex sed
+            rutrum.
+          </p>
+          <Button
+            style={{
+              background: 'transparent',
+              border: '0.1rem solid #fff',
+              zIndex: 9999,
+              position: 'absolute',
+              left: '8%',
+              top: '60%',
+              fontSize: '1.2rem',
+              lineHeight: '1.5rem',
+              minWidth: '82%',
+              padding: '1rem 2rem',
+              color: '#FFF',
+            }}
+          >
+            See All
+          </Button>
+        </Visible>
       </TitleContainer>
 
       {slides.map((item, i) => (
@@ -172,32 +227,64 @@ const Carousel = ({ children }) => {
       <AnimatePresence>
         {slides.map((item, i) => (
           <>
-            {i === index && (
-              <motion.h2
-                key={i}
-                initial={{ y: 50, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  opacity: 0.4,
-                }}
-                exit={{ y: 50, opacity: 0 }}
-                transition={{
-                  duration: 0.5,
-                  repeat: 'no',
-                  delay: 1,
-                }}
-                style={{
-                  position: 'absolute',
-                  right: '-20%',
-                  bottom: '-40%',
-                  fontSize: '20rem',
-                  lineHeight: '15rem',
-                  color: '#FFF',
-                }}
-              >
-                {item.tag}
-              </motion.h2>
-            )}
+            <Visible md lg xl xxl xxxl key={`md_${i}`}>
+              {i === index && (
+                <motion.h2
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{
+                    y: 0,
+                    opacity: 0.4,
+                  }}
+                  exit={{ y: 50, opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    repeat: 'no',
+                    delay: 1,
+                  }}
+                  style={{
+                    position: 'absolute',
+                    right: '-20%',
+                    bottom: '-40%',
+                    fontSize: '20rem',
+                    lineHeight: '15rem',
+                    color: '#FFF',
+                    width: '100%',
+                  }}
+                >
+                  {item.tag}
+                </motion.h2>
+              )}
+            </Visible>
+            <Visible xs sm key={`xs_${i}`}>
+              {i === index && (
+                <motion.h2
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{
+                    y: 0,
+                    opacity: 0.3,
+                  }}
+                  exit={{ y: 50, opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    repeat: 'no',
+                    delay: 1,
+                  }}
+                  style={{
+                    position: 'absolute',
+                    right: '-30%',
+                    bottom: '0%',
+                    fontSize: '8rem',
+                    lineHeight: '5rem',
+                    color: '#fff',
+                    rotate: '180deg',
+                    width: '100%',
+                    writingMode: 'vertical-lr',
+                  }}
+                >
+                  {item.tag}
+                </motion.h2>
+              )}
+            </Visible>
           </>
         ))}
       </AnimatePresence>
