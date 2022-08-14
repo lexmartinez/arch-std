@@ -23,23 +23,18 @@ const slides = [
   },
   {
     background:
-      'https://images.prismic.io/level-group/b1c9a6f3-cc8b-46a6-bb4e-70c975f92397_Monteverde+Exterior+Fachada.png?auto=compress,format&rect=0,0,1920,1080&w=1280&h=720',
+      'https://images.pexels.com/photos/4322027/pexels-photo-4322027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    tag: 'Landscape',
+  },
+  {
+    background:
+      'https://images.pexels.com/photos/6297244/pexels-photo-6297244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    tag: 'Interior',
+  },
+  {
+    background:
+      'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tag: 'Residential',
-  },
-  {
-    background:
-      'https://images.prismic.io/level-group/7c936804-37ba-41cc-aac3-af4c2eaeddcd_semilla+interior+1.png?auto=compress,format&rect=0,0,1920,1080&w=1280&h=720',
-    tag: 'Bedroom',
-  },
-  {
-    background:
-      'https://images.prismic.io/level-group/c86593b2-c36f-4dcc-81ed-ce9bde0b316d_semilla+vista+aerea.png?auto=compress,format&rect=0,0,1920,1080&w=1280&h=720',
-    tag: 'Concepts',
-  },
-  {
-    background:
-      'https://images.prismic.io/level-group/af20ecc8-f80a-4480-b134-021c486e7442_wineClub+-+vista+exhibicion.png?auto=compress,format&rect=0,0,1920,1080&w=1280&h=720',
-    tag: 'Business',
   },
 ]
 
