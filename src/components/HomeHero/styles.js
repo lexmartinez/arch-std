@@ -19,8 +19,8 @@ export const HeroContainer = styled.div`
 
   h1 {
     font-weight: 600;
-    font-size: 10rem;
-    line-height: 10rem;
+    font-size: 7rem;
+    line-height: 7rem;
     position: absolute;
     mix-blend-mode: overlay;
     color: ${({ theme }) => theme.colors.white};
