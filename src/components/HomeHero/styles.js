@@ -27,13 +27,20 @@ export const HeroContainer = styled.div`
     margin: 0;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+
     @media ${({ theme }) => theme.breakpoints.md} {
-      font-size: 12rem;
-      line-height: 12rem;
-      letter-spacing: 1rem;
+      font-size: 10rem;
+      line-height: 10rem;
+      letter-spacing: 0.5rem;
       white-space: nowrap;
       writing-mode: unset;
       text-orientation: unset;
+    }
+
+    @media ${({ theme }) => theme.breakpoints.lg} {
+      font-size: 12rem;
+      line-height: 12rem;
+      letter-spacing: 1rem;
     }
   }
 `
