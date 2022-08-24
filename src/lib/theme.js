@@ -23,7 +23,7 @@ const fonts = {
 }
 
 const colors = {
-  gray100: '#363636',
+  gray100: '#282829',
   gray70: '#6d6c6c',
   gray50: '#a2a2a2',
   gray20: '#ebebeb',
