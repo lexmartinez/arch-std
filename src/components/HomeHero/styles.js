@@ -11,11 +11,6 @@ export const HeroContainer = styled.div`
   color: ${({ theme }) => theme.colors.white};
   min-height: 100vh;
   height: 100vh;
-  padding: 10rem 0;
-
-  @media ${({ theme }) => theme.breakpoints.md} {
-    padding: 0;
-  }
 
   h1 {
     font-weight: 600;
@@ -50,12 +45,7 @@ export const HeroContent = styled(Col)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   ${h100}
-
-  @media ${({ theme }) => theme.breakpoints.md} {
-    align-items: flex-start;
-  }
 `
 
 export const Title = styled.h1``
