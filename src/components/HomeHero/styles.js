@@ -31,7 +31,6 @@ export const HeroContainer = styled.div`
     @media ${({ theme }) => theme.breakpoints.md} {
       font-size: 8rem;
       line-height: 8rem;
-      letter-spacing: 0.5rem;
       white-space: nowrap;
       writing-mode: unset;
       text-orientation: unset;
