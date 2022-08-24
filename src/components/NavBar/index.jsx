@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { Visible } from 'react-grid-system'
 import {
@@ -11,11 +11,13 @@ import {
   IconButton,
   CloseButton,
   MenuContainer,
+  NavItemsContainer,
+  NavItem,
+  CloseIcon,
 } from './styles'
 
 const variants = {
   open: { opacity: 1, y: '0%', transition: { duration: 0.5 } },
-  // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
   close: {
     opacity: 0,
     y: '-100%',
@@ -23,12 +25,26 @@ const variants = {
   },
 }
 
+const items = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Proyectos', href: '/projects' },
+  { label: 'Servicios', href: '/services' },
+  { label: 'Contacto', href: '/contact' },
+]
+
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen(!menuOpen)
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : 'unset'
-  }, [menuOpen])
+
+  const NavItems = () => (
+    <NavItemsContainer>
+      {items.map(({ label, href }, index) => (
+        <Link href={href} key={index}>
+          <NavItem>{label}</NavItem>
+        </Link>
+      ))}
+    </NavItemsContainer>
+  )
 
   return (
     <>
@@ -36,11 +52,13 @@ const NavBar = () => {
         <MenuContainer
           variants={variants}
           animate={menuOpen ? 'open' : 'close'}
-          id="menu"
+          initial={'close'}
+          id={'menu'}
         >
           <CloseButton onClick={toggleMenu}>
-            <NavIcon src={'/menu.svg'} />
+            <CloseIcon src={'/close.svg'} />
           </CloseButton>
+          <NavItems />
         </MenuContainer>
       </Visible>
       <NavContainer>
@@ -62,7 +80,7 @@ const NavBar = () => {
                 </IconButton>
               </Visible>
               <Visible md lg xl xxl xxxl>
-                H
+                <NavItems />
               </Visible>
             </NavCol>
           </NavRow>

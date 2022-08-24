@@ -60,12 +60,17 @@ export const IconButton = styled.div`
 export const CloseButton = styled(IconButton)`
   position: absolute;
   right: 1rem;
-  top: 0.7rem;
+  top: 2rem;
 `
 
 export const NavIcon = styled.img`
   width: 3rem;
   height: 1.8rem;
+`
+
+export const CloseIcon = styled.img`
+  width: 3.8rem;
+  height: 3.8rem;
 `
 
 export const MenuContainer = styled(motion.div)`
@@ -76,4 +81,17 @@ export const MenuContainer = styled(motion.div)`
   left: 0;
   top: 0;
   background-color: ${({ theme }) => theme.colors.white};
+`
+
+export const NavItemsContainer = styled.ul`
+  list-style: none;
+  padding: 6rem 2rem;
+`
+
+export const NavItem = styled.li`
+  cursor: pointer;
+  text-align: right;
+  font-weight: 600;
+  font-size: 2.3rem;
+  line-height: 4rem;
 `
