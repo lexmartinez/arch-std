@@ -50,7 +50,12 @@ export const HeroContent = styled(Col)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   ${h100}
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    align-items: flex-start;
+  }
 `
 
 export const Title = styled.h1``
