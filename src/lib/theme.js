@@ -1,9 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const FontStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 body,html {
-  font-family: Arial, 'Montserrat'
+  font-family: 'Titillium Web'
 }
 `
 
@@ -29,7 +28,9 @@ const colors = {
   gray50: '#a2a2a2',
   gray20: '#ebebeb',
   white: '#ffffff',
-  gray_30: 'rgba(10,10,10,0.3)',
+  black_30: 'rgba(0,0,0,0.5)',
+  red: 'red',
+  blue: 'blue',
 }
 
 const theme = { fonts, colors, breakpoints }
