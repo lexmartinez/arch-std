@@ -17,9 +17,12 @@ export const ContentCol = styled(Col)`
     font-size: 1.2rem;
     line-height: 2rem;
     letter-spacing: 0.01rem;
-    column-count: 2;
-    column-gap: 2rem;
-    text-align: justify;
+
+    @media ${({ theme }) => theme.breakpoints.md} {
+      column-count: 2;
+      column-gap: 2rem;
+      text-align: justify;
+    }
   }
 
   h5 {
