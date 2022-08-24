@@ -14,7 +14,7 @@ import {
 } from './styles'
 
 const variants = {
-  open: { opacity: 1, y: '0%', transition: { duration: 0.2 } },
+  open: { opacity: 1, y: '0%', transition: { duration: 0.5 } },
   // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
   close: {
     opacity: 0,
