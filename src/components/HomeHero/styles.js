@@ -34,6 +34,7 @@ export const HeroContainer = styled.div`
       white-space: nowrap;
       writing-mode: unset;
       text-orientation: unset;
+      letter-spacing: -1rem;
     }
 
     @media ${({ theme }) => theme.breakpoints.lg} {
