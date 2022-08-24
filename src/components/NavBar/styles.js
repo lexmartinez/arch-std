@@ -69,7 +69,7 @@ export const NavIcon = styled.img`
 `
 
 export const MenuContainer = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 99999;
