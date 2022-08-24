@@ -16,23 +16,18 @@ export const breakpoints = {
   xxxl: `(min-width: 1920px)`,
 }
 
-const fonts = {
-  light: 'Louis George Cafe Light',
-  regular: 'Louis George Cafe',
-  bold: 'Louis George Cafe Bold',
-}
-
 const colors = {
-  gray100: '#282829',
+  gray100: '#181819',
+  gray80: '#282829',
   gray70: '#6d6c6c',
   gray50: '#a2a2a2',
   gray20: '#ebebeb',
   white: '#ffffff',
-  black_30: 'rgba(0,0,0,0.5)',
-  red: 'red',
-  blue: 'blue',
+  black_50: 'rgba(0,0,0,0.5)',
+  gray_50: 'rgba(80,80,80,0.5)',
+  gray_20: 'rgba(120,120,120,0.2)',
 }
 
-const theme = { fonts, colors, breakpoints }
+const theme = { colors, breakpoints }
 
 export default theme

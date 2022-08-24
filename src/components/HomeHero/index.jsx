@@ -5,26 +5,25 @@ import { HeroContainer, GridContainer, HeroRow, HeroContent } from './styles'
 
 const HomeHero = (props) => {
   const theme = useTheme()
-  const cianY = useMotionValue(0)
-  const magentaY = useMotionValue(0)
+  const layer1X = useMotionValue(0)
+  const layer2X = useMotionValue(0)
   const input = [-100, 0, 100]
   const output = [0.4, 1, 0.4]
-  const translateCianY = useTransform(cianY, input, output)
-  const translateMagentaY = useTransform(magentaY, input, output)
+  const translateLayer1X = useTransform(layer1X, input, output)
+  const translateLayer2X = useTransform(layer2X, input, output)
 
   useEffect(() => {
-    console.log('AAA')
     const options = { passive: true } // options must match add/remove event
     const scroll = (event) => {
-      console.log(event)
       const scrollValue = event.target.scrollingElement.scrollTop
-      cianY.set(scrollValue / 75)
-      magentaY.set(scrollValue / -90)
+      layer1X.set(scrollValue / 75)
+      layer2X.set(scrollValue / -90)
     }
 
     document.addEventListener('scroll', scroll, options)
     // remove event on unmount to prevent a memory leak
     return () => document.removeEventListener('scroll', scroll, options)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -33,10 +32,10 @@ const HomeHero = (props) => {
         <HeroRow>
           <HeroContent>
             <motion.h1
-              drag="cianY"
+              drag="layer1X"
               style={{
-                x: cianY,
-                translateX: translateCianY,
+                x: layer1X,
+                translateX: translateLayer1X,
                 position: 'absolute',
                 zIndex: 8,
                 color: theme.colors.gray30,
@@ -45,10 +44,10 @@ const HomeHero = (props) => {
               NOLINEAL.
             </motion.h1>
             <motion.h1
-              drag="magentaY"
+              drag="layer2X"
               style={{
-                x: magentaY,
-                translateX: translateMagentaY,
+                x: layer2X,
+                translateX: translateLayer2X,
                 zIndex: 7,
                 color: theme.colors.white,
               }}

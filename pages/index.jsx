@@ -1,7 +1,9 @@
 import { HomeHero, ContentSection } from '~/components'
+import NavBar from '~/components/NavBar'
 export default function Home() {
   return (
     <>
+      <NavBar />
       <HomeHero />
       <ContentSection>
         <h5>Hello</h5>
