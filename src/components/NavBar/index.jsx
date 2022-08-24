@@ -13,6 +13,7 @@ import {
   MenuContainer,
   NavItemsContainer,
   NavItem,
+  LogoMenu,
   CloseIcon,
 } from './styles'
 
@@ -40,7 +41,16 @@ const NavBar = () => {
     <NavItemsContainer>
       {items.map(({ label, href }, index) => (
         <Link href={href} key={index}>
-          <NavItem>{label}</NavItem>
+          <NavItem
+            whileHover={{
+              opacity: 0.65,
+              scale: 1,
+              transition: { duration: 0.75 },
+            }}
+            whileTap={{ opacity: 0.9, scale: 0.9 }}
+          >
+            {label}
+          </NavItem>
         </Link>
       ))}
     </NavItemsContainer>
@@ -59,6 +69,9 @@ const NavBar = () => {
             <CloseIcon src={'/close.svg'} />
           </CloseButton>
           <NavItems />
+          <LogoMenu>
+            NL<span>N</span>L<span>.</span>
+          </LogoMenu>
         </MenuContainer>
       </Visible>
       <NavContainer>

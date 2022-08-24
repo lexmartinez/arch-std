@@ -45,6 +45,12 @@ export const LogoNav = styled.p`
   }
 `
 
+export const LogoMenu = styled(LogoNav)`
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+`
+
 export const IconButton = styled.div`
   width: 3.8rem;
   height: 3.8rem;
@@ -86,12 +92,29 @@ export const MenuContainer = styled(motion.div)`
 export const NavItemsContainer = styled.ul`
   list-style: none;
   padding: 6rem 2rem;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    padding: 0rem;
+  }
 `
 
-export const NavItem = styled.li`
+export const NavItem = styled(motion.li)`
   cursor: pointer;
   text-align: right;
   font-weight: 600;
   font-size: 2.3rem;
-  line-height: 4rem;
+  line-height: 4.3rem;
+  color: ${({ theme }) => theme.colors.gray100};
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+    font-weight: 600;
+    display: inline;
+    margin-left: 2rem;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray70};
+  }
 `
