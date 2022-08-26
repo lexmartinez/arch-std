@@ -53,7 +53,7 @@ export const ContentCol = styled(Col)`
   img {
     width: 100%;
     object-fit: cover;
-    padding: 1rem 0;
+    padding: 0.7rem 0;
     height: 500px;
 
     @media ${({ theme }) => theme.breakpoints.md} {
