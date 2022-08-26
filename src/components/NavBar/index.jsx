@@ -78,13 +78,11 @@ const NavBar = () => {
         <GridContainer>
           <NavRow>
             <NavCol>
-              <LogoNav>
-                <Link href={'/'} as={'p'}>
-                  <>
-                    NL<span>N</span>L<span>.</span>
-                  </>
-                </Link>
-              </LogoNav>
+              <Link href={'/'}>
+                <LogoNav>
+                  NL<span>N</span>L<span>.</span>
+                </LogoNav>
+              </Link>
             </NavCol>
             <NavCol align={'flex-end'}>
               <Visible xs sm>
