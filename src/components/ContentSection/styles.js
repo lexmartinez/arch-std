@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import { Col } from 'react-grid-system'
 
-export const ContentVariation = {
-  DARK: 'dark',
-  LIGHT: 'light',
-}
-
 export const SectionContainer = styled.div`
   width: 100%;
   color: ${({ theme }) => theme.colors.gray100};
@@ -29,21 +24,21 @@ export const ContentCol = styled(Col)`
     }
   }
 
-  h6 {
+  h3 {
     font-weight: 700;
     font-size: 1.3rem;
     margin: 0;
     margin-bottom: 1rem;
   }
 
-  h5 {
+  h2 {
     font-weight: 700;
     font-size: 1.5rem;
     margin: 0;
     margin-bottom: 1rem;
   }
 
-  h4 {
+  h1 {
     font-weight: 700;
     font-size: 1.7rem;
     margin: 0;
@@ -53,11 +48,17 @@ export const ContentCol = styled(Col)`
   img {
     width: 100%;
     object-fit: cover;
-    padding: 0.7rem 0;
-    height: 500px;
+    padding: 0rem;
+    height: 300px;
 
     @media ${({ theme }) => theme.breakpoints.md} {
+      height: 500px;
+    }
+
+    @media ${({ theme }) => theme.breakpoints.lg} {
       padding: 2rem 0;
     }
   }
 `
+
+export const Image = styled.img``

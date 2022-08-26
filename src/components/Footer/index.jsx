@@ -17,7 +17,7 @@ import {
 const items = [
   { label: 'Inicio', href: '/' },
   { label: 'Proyectos', href: '/projects' },
-  { label: 'Nosotros', href: '/about' },
+  { label: 'Nosotros', href: '/us' },
   { label: 'Contacto', href: '/contact' },
 ]
 
