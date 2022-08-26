@@ -9,7 +9,11 @@ export const ContentVariation = {
 export const SectionContainer = styled.div`
   width: 100%;
   color: ${({ theme }) => theme.colors.gray100};
-  padding: 8rem 0rem;
+  padding: 4rem 0rem;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    padding: 6rem 0rem;
+  }
 `
 export const ContentCol = styled(Col)`
   p {
