@@ -107,11 +107,12 @@ export const NavItem = styled(motion.li)`
   color: ${({ theme }) => theme.colors.gray100};
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     line-height: 1.3rem;
     font-weight: 600;
     display: inline;
     margin-left: 2rem;
+    text-transform: uppercase;
   }
 
   &:hover {

@@ -1,9 +1,7 @@
-import { HomeHero, ContentSection } from '~/components'
-import NavBar from '~/components/NavBar'
+import { HomeHero, ContentSection, Page } from '~/components'
 export default function Home() {
   return (
-    <>
-      <NavBar />
+    <Page>
       <HomeHero />
       <ContentSection>
         <h5>Hello</h5>
@@ -129,6 +127,6 @@ export default function Home() {
           posuere eget.
         </p>
       </ContentSection>
-    </>
+    </Page>
   )
 }

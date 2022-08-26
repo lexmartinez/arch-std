@@ -3,8 +3,6 @@ import { Container, Row } from 'react-grid-system'
 import { SectionContainer, ContentCol } from './styles'
 
 const BaseSection = (props) => {
-  const { variation, title, noBottomPadding } = props
-
   return (
     <SectionContainer>
       <Container>
