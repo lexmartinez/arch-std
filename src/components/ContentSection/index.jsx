@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row } from 'react-grid-system'
 import { SectionContainer, ContentCol } from './styles'
 
-const BaseSection = (props) => {
+const ContentSection = (props) => {
   return (
     <SectionContainer>
       <Container>
@@ -14,4 +14,4 @@ const BaseSection = (props) => {
   )
 }
 
-export default BaseSection
+export default ContentSection

@@ -29,9 +29,23 @@ export const ContentCol = styled(Col)`
     }
   }
 
+  h6 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
   h5 {
-    font-weight: 600;
-    font-size: 1.4rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 1.7rem;
     margin: 0;
     margin-bottom: 1rem;
   }
@@ -39,7 +53,11 @@ export const ContentCol = styled(Col)`
   img {
     width: 100%;
     object-fit: cover;
-    padding: 2rem 0;
+    padding: 1rem 0;
     height: 500px;
+
+    @media ${({ theme }) => theme.breakpoints.md} {
+      padding: 2rem 0;
+    }
   }
 `
