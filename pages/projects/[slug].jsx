@@ -1,7 +1,7 @@
-import { ProjectHero, ContentSection } from '~/components'
+import { ProjectHero, ContentSection, Page } from '~/components'
 export default function Home() {
   return (
-    <>
+    <Page>
       <ProjectHero
         backgroundImage={
           'https://images.unsplash.com/photo-1496564203457-11bb12075d90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1250&q=80'
@@ -72,6 +72,6 @@ export default function Home() {
           posuere eget.
         </p>
       </ContentSection>
-    </>
+    </Page>
   )
 }
