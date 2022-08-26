@@ -43,6 +43,7 @@ export const LogoNav = styled.p`
   span {
     color: ${({ theme }) => theme.colors.gray70};
   }
+  cursor: pointer;
 `
 
 export const LogoMenu = styled(LogoNav)`
