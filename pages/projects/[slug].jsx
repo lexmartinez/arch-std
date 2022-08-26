@@ -4,7 +4,7 @@ export default function Home() {
     <Page>
       <ProjectHero
         backgroundImage={
-          'https://images.pexels.com/photos/12161836/pexels-photo-12161836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          'https://images.pexels.com/photos/12161836/pexels-photo-12161836.jpeg?auto=compress&cs=tinysrgb&dpr=1'
         }
         title={'Apple Brompton Road'}
         subtitle={'London, UK'}
