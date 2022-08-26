@@ -28,9 +28,9 @@ const variants = {
 
 const items = [
   { label: 'Inicio', href: '/' },
-  { label: 'Proyectos', href: '/proyectos' },
-  { label: 'Nosotros', href: '/nosotros' },
-  { label: 'Contacto', href: '/contacto' },
+  { label: 'Proyectos', href: '/projects' },
+  { label: 'Nosotros', href: '/about' },
+  { label: 'Contacto', href: '/contact' },
 ]
 
 const NavBar = () => {
