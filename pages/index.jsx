@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeHero, ContentSection, Page } from '~/components'
+import { HomeHero, ContentSection, Page, ProjectList } from '~/components'
 import { cachedFetch } from '~/lib/fetch'
 
 const Home = (props) => {
@@ -7,6 +7,7 @@ const Home = (props) => {
     <Page>
       <HomeHero />
       <ContentSection data={props?.data} />
+      <ProjectList data={props?.projects} />
     </Page>
   )
 }
@@ -17,13 +18,14 @@ export async function getServerSideProps(context) {
     `${process.env.API_BASE_PROTOCOL}${hostname}/api/pages/home`,
     context.query.force
   )
-  /*const projects = await cachedFetch(
+  const projects = await cachedFetch(
     `${process.env.API_BASE_PROTOCOL}${hostname}/api/projects`,
     context.query.force
-  )*/
+  )
   return {
     props: {
-      data: data || [],
+      data: data || {},
+      projects: (projects || []).filter(({ featured }) => featured),
     },
   }
 }

@@ -12,9 +12,8 @@ const ContentPage = (props) => {
 
 export async function getServerSideProps(context) {
   const hostname = context.req.headers.host
-  const page = context?.query?.page
   const data = await cachedFetch(
-    `${process.env.API_BASE_PROTOCOL}${hostname}/api/pages/${page}`,
+    `${process.env.API_BASE_PROTOCOL}${hostname}/api/pages/projects`,
     context.query.force
   )
   return {
