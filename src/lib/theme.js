@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const FontStyles = createGlobalStyle`
 body,html {
-  font-family: 'Titillium Web'
+  font-family: 'Titillium Web';
+  height: 100%;
 }
 `
 

@@ -11,20 +11,16 @@ const ContentSection = (props) => {
           <ContentCol xs={12}>
             {data?.map((block, index) => {
               const { type } = block
-              console.log(block)
               const plainText = block?.content?.rich_text?.map(
                 ({ plain_text }) => plain_text
               )
               switch (type) {
                 case 'heading_1':
                   return <h1 key={index}>{plainText}</h1>
-                  break
                 case 'heading_2':
                   return <h2 key={index}>{plainText}</h2>
-                  break
                 case 'heading_3':
                   return <h3 key={index}>{plainText}</h3>
-                  break
                 case 'paragraph':
                   return (
                     <p key={index}>
@@ -42,12 +38,10 @@ const ContentSection = (props) => {
                       )}
                     </p>
                   )
-                  break
                 case 'image':
                   const image =
                     block?.content?.external?.url || block?.content?.file?.url
-                  return <Image src={image} alt={'image'} />
-                  break
+                  return <Image src={image} alt={'image'} key={index} />
                 default:
                   return <></>
               }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Visible } from 'react-grid-system'
 import {
@@ -16,6 +16,7 @@ import {
   LogoMenu,
   CloseIcon,
 } from './styles'
+import { useRouter } from 'next/router'
 
 const variants = {
   open: {
@@ -40,11 +41,16 @@ const items = [
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen(!menuOpen)
+  const { asPath } = useRouter()
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [asPath])
 
   const NavItems = () => (
     <NavItemsContainer>
       {items.map(({ label, href }, index) => (
-        <Link href={href} key={index}>
+        <Link href={href} key={index} scroll={true}>
           <NavItem
             whileHover={{
               opacity: 0.65,
