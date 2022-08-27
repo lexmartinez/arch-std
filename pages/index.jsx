@@ -39,7 +39,7 @@ const Home = (props) => {
         </svg>
       </Visible>
       <HomeHero />
-      <ContentSection data={props?.data} />
+      <ContentSection data={props?.data} smallBottomPadding={true} />
       <ProjectList data={props?.projects} />
     </Page>
   )

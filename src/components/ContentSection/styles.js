@@ -5,9 +5,13 @@ export const SectionContainer = styled.div`
   width: 100%;
   color: ${({ theme }) => theme.colors.gray100};
   padding: 4rem 0rem;
+  padding-bottom: ${({ smallBottomPadding }) =>
+    smallBottomPadding ? '2rem' : '4rem'};
 
   @media ${({ theme }) => theme.breakpoints.md} {
     padding: 6rem 0rem;
+    padding-bottom: ${({ smallBottomPadding }) =>
+      smallBottomPadding ? '3rem' : '6rem'};
   }
 `
 export const ContentCol = styled(Col)`

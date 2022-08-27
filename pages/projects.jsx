@@ -5,7 +5,7 @@ import { cachedFetch } from '~/lib/fetch'
 const ContentPage = (props) => {
   return (
     <Page>
-      <ContentSection data={props?.data || []} />
+      <ContentSection data={props?.data || []} smallBottomPadding={true} />
       <ProjectList data={props?.projects} />
     </Page>
   )

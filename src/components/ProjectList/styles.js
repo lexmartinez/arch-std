@@ -18,11 +18,11 @@ export const ProjectGrid = styled.div`
   grid-template-columns: 100%;
 
   @media ${({ theme }) => theme.breakpoints.md} {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
   }
 
   @media ${({ theme }) => theme.breakpoints.xxl} {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: calc(33% - 1rem) calc(33% - 1rem) calc(33% - 1rem);
   }
 `
 

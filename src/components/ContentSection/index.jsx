@@ -3,9 +3,9 @@ import { Container, Row } from 'react-grid-system'
 import { SectionContainer, ContentCol, Image } from './styles'
 
 const ContentSection = (props) => {
-  const { data } = props
+  const { data, smallBottomPadding } = props
   return (
-    <SectionContainer>
+    <SectionContainer smallBottomPadding={smallBottomPadding}>
       <Container>
         <Row>
           <ContentCol xs={12}>
