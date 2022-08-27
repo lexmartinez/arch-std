@@ -1,4 +1,4 @@
-import notion, { mapBlocks } from '~/utils/notion'
+import notion, { mapBlocks } from '~/lib/notion'
 
 export default async function handler(req, res) {
   const response = await notion.databases.query({
