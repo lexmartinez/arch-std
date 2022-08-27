@@ -18,7 +18,11 @@ import {
 } from './styles'
 
 const variants = {
-  open: { opacity: 1, y: '0%', transition: { duration: 0.5 } },
+  open: {
+    opacity: 1,
+    y: '0%',
+    transition: { duration: 0.5, when: 'beforeChildren', staggerChildren: 0.3 },
+  },
   close: {
     opacity: 0,
     y: '-100%',
@@ -61,6 +65,7 @@ const NavBar = () => {
       <Visible xs sm>
         <MenuContainer
           variants={variants}
+          layout
           animate={menuOpen ? 'open' : 'close'}
           initial={'close'}
           id={'menu'}
