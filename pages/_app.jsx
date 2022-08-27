@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import theme, { FontStyles } from '~/lib/theme'
+import { PageTransition } from '~/components'
 import '~styles/globals.css'
 
 function SiteApp({ Component, pageProps }) {
@@ -14,7 +15,9 @@ function SiteApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FontStyles />
-      <Component {...pageProps} />
+      <PageTransition>
+        <Component {...pageProps} />
+      </PageTransition>
     </ThemeProvider>
   )
 }
