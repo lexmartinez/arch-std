@@ -28,9 +28,14 @@ export const HeroContainer = styled.div`
     margin: 0;
     letter-spacing: -1rem;
 
+    @media ${({ theme }) => theme.breakpoints.md} {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
     @media ${({ theme }) => theme.breakpoints.lg} {
-      font-size: 8rem;
-      line-height: 8rem;
+      font-size: 7rem;
+      line-height: 7rem;
       white-space: nowrap;
       writing-mode: unset;
       text-orientation: unset;
