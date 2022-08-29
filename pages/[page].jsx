@@ -1,11 +1,16 @@
 import React from 'react'
-import { ContentSection, Page } from '~/components'
+import { ContentSection, Page, NotFoundHero } from '~/components'
 import { cachedFetch } from '~/lib/fetch'
 
 const ContentPage = (props) => {
+  const hasContent = (props?.data || []).length > 0
   return (
     <Page>
-      <ContentSection data={props?.data || []} />
+      {hasContent ? (
+        <ContentSection data={props?.data || []} />
+      ) : (
+        <NotFoundHero />
+      )}
     </Page>
   )
 }
