@@ -26,6 +26,7 @@ export const HeroContainer = styled.div`
     mix-blend-mode: overlay;
     color: ${({ theme }) => theme.colors.white};
     margin: 0;
+    letter-spacing: -1rem;
 
     @media ${({ theme }) => theme.breakpoints.lg} {
       font-size: 8rem;
@@ -33,7 +34,7 @@ export const HeroContainer = styled.div`
       white-space: nowrap;
       writing-mode: unset;
       text-orientation: unset;
-      letter-spacing: -1rem;
+
     }
 
     @media ${({ theme }) => theme.breakpoints.lg} {
