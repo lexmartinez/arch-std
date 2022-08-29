@@ -20,32 +20,17 @@ export const HeroContainer = styled.div`
 
   h1 {
     font-weight: 600;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
+    font-size: 16vw;
+    line-height: 1;
     position: absolute;
     mix-blend-mode: overlay;
     color: ${({ theme }) => theme.colors.white};
     margin: 0;
 
-    @media ${({ theme }) => theme.breakpoints.md} {
-      font-size: 4rem;
-      line-height: 4rem;
-    }
-
     @media ${({ theme }) => theme.breakpoints.lg} {
-      font-size: 7rem;
-      line-height: 7rem;
-      white-space: nowrap;
-      writing-mode: unset;
-      text-orientation: unset;
-
+      font-size: 12vw;
     }
 
-    @media ${({ theme }) => theme.breakpoints.lg} {
-      font-size: 12rem;
-      line-height: 12rem;
-      letter-spacing: 1rem;
-    }
   }
   
   }
@@ -80,8 +65,7 @@ export const Button = styled.button`
   margin-left: 0.5rem;
 
   @media ${({ theme }) => theme.breakpoints.lg} {
-    margin-top: 25rem;
-    align-self: center;
+    margin-top: 20rem;
   }
 
   &:hover {
