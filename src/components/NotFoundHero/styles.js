@@ -14,7 +14,7 @@ export const HeroContainer = styled.div`
   padding-top: 2rem;
 
 
-  @media ${({ theme }) => theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     padding-top: 0rem;
   }
 
@@ -27,7 +27,7 @@ export const HeroContainer = styled.div`
     color: ${({ theme }) => theme.colors.white};
     margin: 0;
 
-    @media ${({ theme }) => theme.breakpoints.md} {
+    @media ${({ theme }) => theme.breakpoints.lg} {
       font-size: 8rem;
       line-height: 8rem;
       white-space: nowrap;
@@ -74,7 +74,7 @@ export const Button = styled.button`
   margin-top: 12rem;
   margin-left: 0.5rem;
 
-  @media ${({ theme }) => theme.breakpoints.md} {
+  @media ${({ theme }) => theme.breakpoints.lg} {
     margin-top: 25rem;
     align-self: center;
   }
