@@ -63,6 +63,7 @@ export const Button = styled.button`
   width: fit-content;
   margin-top: 12rem;
   margin-left: 0.5rem;
+  z-index: 9999;
 
   @media ${({ theme }) => theme.breakpoints.lg} {
     margin-top: 20rem;
