@@ -28,7 +28,7 @@ const FooterSection = (props) => {
         <Row>
           <ContentCol xs={12}>
             <LogoFooter>
-              NL<span>N</span>L<span>.</span>
+              MT<span>DIG</span>ITAL<span>.</span>
             </LogoFooter>
             <FooterOptions>
               <Visible md lg xl xxl xxxl>

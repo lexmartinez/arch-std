@@ -81,7 +81,7 @@ const NavBar = () => {
           </CloseButton>
           <NavItems />
           <LogoMenu>
-            NL<span>N</span>L<span>.</span>
+            MT<span>DIG</span>ITAL<span>.</span>
           </LogoMenu>
         </MenuContainer>
       </Visible>
@@ -91,7 +91,7 @@ const NavBar = () => {
             <NavCol>
               <Link href={'/'}>
                 <LogoNav>
-                  NL<span>N</span>L<span>.</span>
+                  MT<span>DIG</span>ITAL<span>.</span>
                 </LogoNav>
               </Link>
             </NavCol>
