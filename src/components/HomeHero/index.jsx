@@ -41,7 +41,7 @@ const HomeHero = (props) => {
                 color: theme.colors.gray30,
               }}
             >
-              NOLINEAL.
+              MTDIGITAL.
             </motion.h1>
             <motion.h1
               drag="layer2X"
@@ -52,7 +52,7 @@ const HomeHero = (props) => {
                 color: theme.colors.white,
               }}
             >
-              NOLINEAL.
+              MTDIGITAL.
             </motion.h1>
           </HeroContent>
         </HeroRow>
